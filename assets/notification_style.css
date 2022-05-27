@@ -1,0 +1,17 @@
+body {
+  font-family: 'Jost', sans-serif;
+}
+
+
+
+#close_container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#content {
+  text-align: center;
+}
+
+h1 { font-size: 36px; }
+p { font-size: 24px; }

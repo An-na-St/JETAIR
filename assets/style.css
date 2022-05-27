@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Jost', sans-serif;
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6, p, nav {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #091023;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/*Background*/
+
+.bg {
+  width: 100vw;
+  background: #fff;
+}
+
+.bg.header {
+  height: 100vh;
+  background: #000;
+}
+
+.bg.services {
+  height: 2086px;
+}
+
+.bg.fleet {
+  height: 1428px;
+  background: #000;
+}
+
+.bg.clients {
+  height: 925px;
+}
+
+.bg.contacts {
+  height: 792px;
+  background: #808080;
+}
+
+.bg.booking {
+  height: 341px;
+  background: #000;
+}
+
+.bg.footer {
+  height: 83px;
+}
+
+#intro {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+/*Containers*/
+
+#container_header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#container_footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#content_header {
+  position: relative;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  max-height: 960px;
+  margin: 10px;
+  z-index: 2;
+}
+
+.header_txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20%;
+  line-height: 1.4;
+  width: 60%;
+}
+
+.header_info {
+  display: flex;
+}
+
+.header_info div {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#header_left {
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+}
+
+#logo {
+  display: flex;
+}
+
+#logo h3 {
+  font-weight: 900;
+}
+
+#hamburger {
+  margin-top: 7px;
+}
+
+
+
+
+
+
+
+
+
+.footer_txt {
+  width: 70%;
+  color: #000;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .bg.header { height: 961px; }
+  .bg.services { height: 2321px; }
+  .bg.fleet { height: 2948px; }
+  .bg.clients { height: 933px; }
+  .bg.contacts { height: 895px; }
+  .bg.booking { height: 476px; }
+  .bg.footer { height: 86px; }
+
+  .footer_txt { width: 90%; }
+}
