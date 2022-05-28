@@ -9,9 +9,9 @@
   </head>
   <body>
     <div class='bg header'>
-      <div id='container_header'>
-        <img id='intro' src='assets/images/bg.png' alt='plane background'>
-        <div id='content_header'>
+      <img id='intro' src='assets/images/bg.png' alt='plane background'>
+      <div class='main_container'>
+        <div id='content_header_container'>
           <header>
             <div id='header_left'>
               <div id='logo'>
@@ -34,13 +34,29 @@
           <div class='header_info'>
             <img src='assets/images/medal.svg' alt='medal' height='60px'>
             <div>
-              <h2>Лидер рынка</h2>
-              <p>№1 среди чартерных авиакомпаний
-                по версии Flight Scaner magazine </p>
+              <h3>Лидер рынка</h3>
+              <p>
+                №1 среди чартерных авиакомпаний
+                по версии Flight Scaner magazine
+              </p>
             </div>
           </div>
-          <div>
-            <h1>Часть 4</h1>
+          <div id='booking_container_top'>
+            <div class='book_flight'>
+              <h1>Забронировать частный борт</h1>
+              <form class='form' name='book_flight'>
+                <div class='fields'>
+                  <input class='item field' type='text'  name='name' placeholder='Имя' maxlength='15' required>
+                  <input class='item field' type='text' name='company' placeholder='Компания' maxlength='25' required>
+                  <input class='item field' type='tel' name='phone_number' placeholder='Телефон' maxlength='15' required>
+                  <input class='item btn' type='submit' name='submit' value='Забронировать' formaction='notification.html'>
+                </div>
+                <div>
+                  <input class='checkbox' type='checkbox' name='agree' required>
+                  <span>Я даю согласие на обработку своих персональных данных</span>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -58,11 +74,29 @@
 
     </div>
     <div class='bg booking'>
-
+      <div class='main_container'>
+        <div id='booking_container_bottom'>
+          <div class='book_flight'>
+            <h1>Забронировать частный борт</h1>
+            <form class='form' name='book_flight'>
+              <div class='fields'>
+                <input class='item field' type='text'  name='name' placeholder='Имя' maxlength='15' required>
+                <input class='item field' type='text' name='company' placeholder='Компания' maxlength='25' required>
+                <input class='item field' type='tel' name='phone_number' placeholder='Телефон' maxlength='15' required>
+                <input class='item btn' type='submit' name='submit' value='Забронировать' formaction='notification.html'>
+              </div>
+              <div>
+                <input class='checkbox' type='checkbox' name='agree' required>
+                <span>Я даю согласие на обработку своих персональных данных</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     <div class='bg footer'>
-      <div id='container_footer'>
-        <p class='footer_txt'>
+      <div class='main_container'>
+        <p class='txt_black'>
           © Jetair — сайт для тестовой верстки чартерной авиакомпании
         </p>
       </div>
