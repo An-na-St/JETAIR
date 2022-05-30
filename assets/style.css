@@ -243,6 +243,30 @@ header {
   overflow: hidden;
 }
 
+/*grid*/
+
+.grid {
+  display: grid;
+  grid: 382px 382px 382px / 1fr 1fr 1fr;
+  margin: 5% 0;
+}
+
+.plane {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.plane_img {
+  width: 95%;
+}
+
+.plane_description {
+  width: 95%;
+  line-height: 1.5;
+}
+
 /**/
 
 .txt_black {
