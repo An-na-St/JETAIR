@@ -2,6 +2,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: 'Jost', sans-serif;
+  line-height: 1.4;
   color: #fff;
 }
 
@@ -74,8 +75,9 @@ h1, h2, h3, h4, h5, h6, p, nav {
 .main_container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 70%;
+  justify-content: space-around;
+  width: 75%;
+  max-width: 1110px;
   height: 100%;
   margin: 0 auto;
 }
@@ -104,7 +106,6 @@ h1, h2, h3, h4, h5, h6, p, nav {
   flex-direction: column;
   justify-content: space-between;
   height: 20%;
-  line-height: 1.4;
   width: 60%;
 }
 
@@ -205,8 +206,6 @@ header {
   background-color: #000;
 }
 
-/**/
-
 /*Contacts*/
 
 #contacts_container {
@@ -221,7 +220,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  line-height: 1.5;
   height: 60%;
   width: 35%;
 }
@@ -248,7 +246,7 @@ header {
 .grid {
   display: grid;
   grid: 382px 382px 382px / 1fr 1fr 1fr;
-  margin: 5% 0;
+  
 }
 
 .plane {
@@ -264,7 +262,97 @@ header {
 
 .plane_description {
   width: 95%;
-  line-height: 1.5;
+}
+
+/*services*/
+
+#services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 55%;
+  width: 100%;
+}
+
+#services_description {
+  color: #000;
+  width: 70%;
+  align-items: center;
+}
+
+#services_options {
+  display: grid;
+  grid: 415px 415px / 1fr 1fr;
+  width: 100%;
+}
+
+.option {
+  position: relative;
+}
+
+.option h2 {
+  position: relative;
+  font-weight: 400;
+  margin-top: 60%;
+  margin-left: 5%;
+  z-index: 2;
+}
+
+.option_bg {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+}
+
+/*company*/
+
+#company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 35%;
+  width: 100%;
+}
+
+#company h3 {
+  font-weight: 400;
+  text-align: center;
+  width: 40%;
+}
+
+#company p {
+  width: 80%;
+}
+
+#advantages_company {
+  display: flex;
+  justify-content: space-between;
+}
+
+#advantages_company div {
+  width: 24%;
+}
+
+/*clients*/
+
+#clients_description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#clients_description p {
+  width: 32%;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.feedback {
+  background: #e5e5e5;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 /**/
@@ -282,9 +370,7 @@ header {
   justify-content: center;
 }
 
-
-
-
+/**/
 
 @media only screen and (max-width: 480px) {
   .bg.header { height: 961px; }
