@@ -11,7 +11,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: 'Jost', sans-serif;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #fff;
 }
 
@@ -44,7 +44,26 @@ a:active  {
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  padding: 15px 0;
 } /**/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .content_container {
+    width: 90%;
+  }/**/
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .content_container {
+    width: 90%;
+  }/**/
+}
+
+@media (max-width: 767px) {
+  .content_container {
+    width: 90%;
+  }/**/
+}
 
 /*--------------------------- Scrollbar ------------------------------*/
 
@@ -68,7 +87,7 @@ a:active  {
   width: 100vw;
   background: #fff;
 }
-.bg.header {
+.bg.intro {
   position: relative;
   height: 100vh;
   background: #000;
@@ -95,43 +114,36 @@ a:active  {
 .bg.footer {
   height: 83px;
 }
-.intro {
+.intro_img {
   position: absolute;
   width: 100%;
   height: auto;
   z-index: 1;
 }
 
+@media (max-width: 767px) {
+  .bg.intro { height: 1200px;}
+}
+
+@media (max-width: 360px) {
+  .bg.services { height: 2321px; }
+  .bg.fleet { height: 2948px; }
+  .bg.clients { height: 933px; }
+  .bg.contacts { height: 895px; }
+  .bg.booking { height: 476px; }
+  .bg.footer { height: 86px; }
+}
+
 /*--------------------------- Background ------------------------------*/
 
 /*--------------------------- Header ------------------------------*/
-
-
-
-.header_txt {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 20%;
-  width: 60%;
-}
-
-.header_info {
-  display: flex;
-  width: 40%;
-}
-
-.header_info div {
-  display: flex;
-  flex-direction: column;
-}
-
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-bottom: 50px;
 } /**/
 header h4 {
   white-space: nowrap;
@@ -228,9 +240,6 @@ header h4 {
 } /**/
 
 
-
-
-
 .header_menu {
   display: flex;
   align-items: center;
@@ -248,6 +257,34 @@ header h4 {
   color: #fff;
 } /**/
 
+
+.intro_description {
+  width: 50%;
+} /**/
+.intro_description h1 {
+  margin-bottom: 10px;
+  line-height: 1.4;
+} /**/
+.intro_description p {
+  width: 80%;
+} /**/
+
+
+.intro_advantage {
+  display: flex;
+  align-items: flex-start;
+  width: 40%;
+} /**/
+.intro_advantage_img {
+  width: 52px;
+  margin: 9px 23px 0 0;
+} /**/
+.intro_advantage_title {
+  margin-bottom: 5px;
+} /**/
+
+/*Form ->->->*/
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .navigation {
     justify-content: center;
@@ -257,15 +294,14 @@ header h4 {
     padding: 18px 25px;
     border: #091023 1px solid;
   } /**/
-
   .header_list {
     flex-direction: column;
   } /**/
-
   .header_list li {
     margin-top: 15px;
     margin-left: 0;
   } /**/
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -277,14 +313,23 @@ header h4 {
     padding: 18px 25px;
     border: #091023 1px solid;
   } /**/
-
   .header_list {
     flex-direction: column;
   } /**/
-
   .header_list li {
     margin-top: 15px;
     margin-left: 0;
+  } /**/
+
+  .intro_description h1 {
+    font-size: 28px;
+    width: 70%;
+    min-width: 360px;
+  } /**/
+
+  .intro_advantage {
+    width: 40%;
+    min-width: 310px;
   } /**/
 }
 
@@ -292,11 +337,10 @@ header h4 {
   header h4 {
     display: none;
   } /**/
-
   .header_left {
     width: 100%;
     justify-content: space-between;
-  }
+  } /**/
 
   .navigation {
     justify-content: center;
@@ -308,40 +352,71 @@ header h4 {
     right: 0;
     border: #091023 1px solid;
   } /**/
-
   .header_list {
     flex-direction: column;
   } /**/
-
   .header_list li {
     margin-top: 15px;
     margin-left: 0;
   } /**/
+
+  .intro_description {
+    width: 75%;
+  } /**/
+  .intro_description h1 {
+    font-size: 26px;
+  } /**/
+  .intro_description p {
+    width: 100%;
+  } /**/
+
+  .intro_advantage {
+    width: 70%;
+  } /**/
+  .intro_advantage_title {
+    font-size: 22px;
+  } /**/
+
 }
 
 @media (max-width: 360px) {
   .navigation {
     height: 280px;
     width: 100%;
-    
   } /**/
+
+  .intro_description {
+    width: 80%;
+  } /**/
+  .intro_description h1 {
+    font-size: 24px;
+  } /**/
+
+  .intro_advantage {
+    width: 100%;
+  } /**/
+  .intro_advantage_title {
+    font-size: 18px;
+  } /**/
+
 }
 
 /*--------------------------- Header ------------------------------*/
 
 /*--------------------------- Form ------------------------------*/
 
-#booking_container_top {
-  height: 20%;
+.intro_booking {
+  height: 25%;
   width: 100%;
+  margin-bottom: 30px;
 }
 
-#booking_container_bottom {
+.booking_container_bottom {
   height: 50%;
   padding-bottom: 5%;
 }
 
-.book_flight {
+.booking {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -349,46 +424,96 @@ header h4 {
   width: 100%;
 }
 
-.form {
+.booking_form {
   display: flex;
   flex-direction: column;
   height: 50%;
-  justify-content: space-between;
-}
-
-.fields {
-  display: flex;
   width: 100%;
   justify-content: space-between;
 }
 
+.booking_fields {
+  width: 100%;
+  padding-bottom: 25px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+  justify-items: center;
+}
+
 .item {
-  width: 22%;
+  width: 100%;
+  min-width: 195px;
+  max-width: 255px;
+  height: 100%;
   border: none;
   border-radius: 5px;
-}
+} /**/
 
 .field {
   background: #c4c4c4;
   color: #808080;
   padding: 13px 10px;
-}
+} /**/
 
 .field:focus {
   color: #000;
   background: #fff;
   outline: none;
-}
+} /**/
 
 .btn {
   padding: 0;
   color: #fff;
   background: #15468d;
   cursor: pointer;
-}
+} /**/
 
 .checkbox {
-  background-color: #000;
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .intro_booking {
+    height: 30%;
+  }
+
+  .booking_title {
+    font-size: 26px;
+  }
+
+  .booking_form {
+    height: 70%;
+  }
+
+  .booking_fields {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro_booking {
+    height: 40%;
+  }
+
+  .booking_title {
+    font-size: 26px;
+  }
+
+  .booking_form {
+    height: 80%;
+  }
+
+  .booking_fields {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 50px 50px;
+    justify-items: baseline;
+  }
 }
 
 /*--------------------------- Form ------------------------------*/
@@ -568,33 +693,7 @@ header h4 {
 
 /*--------------------------- Styles ------------------------------*/
 
-@media (min-width: 992px) and (max-width: 1199px) {
-  .content_container {
-    width: 90%;
-  }/**/
-}
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .content_container {
-    width: 90%;
-  }/**/
-}
-
-@media (max-width: 767px) {
-  .content_container {
-    width: 90%;
-  }/**/
-}
-
-@media (max-width: 360px) {
-  .bg.header { height: 961px; }
-  .bg.services { height: 2321px; }
-  .bg.fleet { height: 2948px; }
-  .bg.clients { height: 933px; }
-  .bg.contacts { height: 895px; }
-  .bg.booking { height: 476px; }
-  .bg.footer { height: 86px; }
-}
 
 
 /*--------------------------- Media ------------------------------*/
