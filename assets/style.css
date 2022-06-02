@@ -93,7 +93,7 @@ a:active  {
   background: #000;
   overflow: hidden;
 }
-.bg.services {
+.bg.info {
   height: 2086px;
 }
 .bg.fleet {
@@ -123,10 +123,11 @@ a:active  {
 
 @media (max-width: 767px) {
   .bg.intro { height: 1200px;}
+  .bg.info { height: 2321px; }
 }
 
 @media (max-width: 360px) {
-  .bg.services { height: 2321px; }
+  .bg.info { height: 2321px; }
   .bg.fleet { height: 2948px; }
   .bg.clients { height: 933px; }
   .bg.contacts { height: 895px; }
@@ -143,7 +144,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 50px;
+  margin: 0 0 50px 0;
 } /**/
 header h4 {
   white-space: nowrap;
@@ -161,7 +162,7 @@ header h4 {
 .logo {
   display: flex;
   position: relative;
-  padding-left: 80px;
+  padding: 0 0 0 80px;
 } /**/
 .logo_img {
   position: absolute;
@@ -251,7 +252,7 @@ header h4 {
 } /**/
 .header_list li {
   list-style: none;
-  margin-left: 25px;
+  margin: 0 0 0 25px;
 } /**/
 .header_link {
   color: #fff;
@@ -262,7 +263,7 @@ header h4 {
   width: 50%;
 } /**/
 .intro_description h1 {
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   line-height: 1.4;
 } /**/
 .intro_description p {
@@ -280,7 +281,7 @@ header h4 {
   margin: 9px 23px 0 0;
 } /**/
 .intro_advantage_title {
-  margin-bottom: 5px;
+  margin: 0 0 5px 0;
 } /**/
 
 /*Form ->->->*/
@@ -298,8 +299,7 @@ header h4 {
     flex-direction: column;
   } /**/
   .header_list li {
-    margin-top: 15px;
-    margin-left: 0;
+    margin: 15px 0 0 0;
   } /**/
 
 }
@@ -317,8 +317,7 @@ header h4 {
     flex-direction: column;
   } /**/
   .header_list li {
-    margin-top: 15px;
-    margin-left: 0;
+    margin: 15px 0 0 0;
   } /**/
 
   .intro_description h1 {
@@ -356,8 +355,7 @@ header h4 {
     flex-direction: column;
   } /**/
   .header_list li {
-    margin-top: 15px;
-    margin-left: 0;
+    margin: 15px 0 0 0;
   } /**/
 
   .intro_description {
@@ -408,12 +406,12 @@ header h4 {
 .intro_booking {
   height: 25%;
   width: 100%;
-  margin-bottom: 30px;
-}
+  margin: 0 0 30px 0;
+} /**/
 
 .booking_container_bottom {
   height: 50%;
-  padding-bottom: 5%;
+  padding: 0 0 5% 0;
 }
 
 .booking {
@@ -422,7 +420,7 @@ header h4 {
   justify-content: space-between;
   height: 100%;
   width: 100%;
-}
+} /**/
 
 .booking_form {
   display: flex;
@@ -430,11 +428,11 @@ header h4 {
   height: 50%;
   width: 100%;
   justify-content: space-between;
-}
+} /**/
 
 .booking_fields {
   width: 100%;
-  padding-bottom: 25px;
+  padding: 0 0 25px 0;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -442,7 +440,7 @@ header h4 {
   grid-column-gap: 30px;
   grid-row-gap: 20px;
   justify-items: center;
-}
+} /**/
 
 .item {
   width: 100%;
@@ -518,6 +516,243 @@ header h4 {
 
 /*--------------------------- Form ------------------------------*/
 
+/*--------------------------- Services ------------------------------*/
+
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 50%;
+}
+
+.services_title {
+  color: #000;
+  font-size: 36px;
+}
+
+.services_description {
+  color: #000;
+  width: 70%;
+}
+
+.services_options {
+  width: 100%;
+  height: 70%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.services_options_row {
+  display: flex;
+  height: 50%;
+}
+
+.option {
+  position: relative;
+  min-width: 330px;
+  width: 50%;
+  height: auto;
+  overflow: hidden;
+}
+
+.option_name {
+  position: relative;
+  z-index: 2;
+  font-weight: 400;
+
+  left: 5%;
+  top: 80%;
+} /**/
+
+.option_bg {
+  position: absolute;
+  z-index: 1;
+} /**/
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .services_description {
+    width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .services {
+    height: 35%;
+  }
+
+  .services_title {
+    font-size: 30px;
+  }
+
+  .services_description {
+    width: 90%;
+  }
+}
+
+@media (max-width: 360px) {
+  .services_title {
+    font-size: 26px;
+  }
+
+  .services_description {
+    width: 100%;
+  }
+}
+
+/*--------------------------- Services ------------------------------*/
+
+/*--------------------------- Company ------------------------------*/
+
+.company {
+  color: #000;
+  height: 40%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.company_title {
+  font-size: 36px;
+}
+
+.company_subtitle {
+  font-weight: 400;
+  text-align: center;
+  width: 50%;
+  font-size: 27px;
+}
+
+.company_description {
+  width: 80%;
+}
+
+.company_advantages {
+  display: flex;
+  height: 50%;
+}
+
+.company_advantages_half {
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+
+.company_advantage {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.advantage_img {
+
+}
+
+.advantage_description {
+  padding: 0 10px;
+  height: 75%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .company_title {
+    font-size: 30px;
+  }
+  
+  .company_subtitle {
+    font-size: 22px;
+  }
+
+  .company_description {
+    width: 90%;
+  }
+
+  .company_advantages {
+    height: 55%;
+  }
+
+  .advantage_description {
+    height: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .company {
+    height: 65%;
+  }
+
+  .company_title {
+    font-size: 30px;
+  }
+  
+  .company_subtitle {
+    font-size: 22px;
+    width: 80%;
+  }
+
+  .company_description {
+    width: 90%;
+  }
+
+  .company_advantages {
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+  }
+
+  .company_advantages_half {
+    width: 80%;
+  }
+
+  .advantage_description {
+    padding: 0 15px 15px 15px;
+    height: 85%;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .company_title {
+    font-size: 26px;
+  }
+  
+  .company_subtitle {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .company_description {
+    width: 100%;
+  }
+
+  .company_advantages {
+    height: 70%;
+  }
+
+  .company_advantages_half {
+    width: 100%;
+  }
+
+  .advantage_img {
+    height: 50px;
+  }
+
+  .advantage_description {
+    padding: 0 15px 15px 15px;
+    height: 85%;
+  }
+}
+
+/*--------------------------- Company ------------------------------*/
+
+
+
+
 /*--------------------------- Contacts ------------------------------*/
 
 #contacts_container {
@@ -525,7 +760,7 @@ header h4 {
   flex-direction: column;
   justify-content: space-between;
   height: 63%;
-  padding-bottom: 10%;
+  padding: 0 0 10% 0;
 }
 
 #contacts {
@@ -581,7 +816,7 @@ header h4 {
 
 /*--------------------------- Services ------------------------------*/
 
-#services {
+.servxices {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -590,67 +825,18 @@ header h4 {
   width: 100%;
 }
 
-#services_description {
+.servicses_description {
   color: #000;
   width: 70%;
   align-items: center;
 }
 
-#services_options {
+.servsices_options {
   display: grid;
   grid: 415px 415px / 1fr 1fr;
   width: 100%;
 }
 
-.option {
-  position: relative;
-}
-
-.option h2 {
-  position: relative;
-  font-weight: 400;
-  margin-top: 60%;
-  margin-left: 5%;
-  z-index: 2;
-  overflow: hidden;
-}
-
-.option_bg {
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-}
-
-  /*--------------------------- Company ------------------------------*/
-
-  #company {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 35%;
-    width: 100%;
-  }
-  
-  #company h3 {
-    font-weight: 400;
-    text-align: center;
-    width: 40%;
-  }
-  
-  #company p {
-    width: 80%;
-  }
-  
-  #advantages_company {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  #advantages_company div {
-    width: 24%;
-  }
   
   /*clients*/
   
@@ -692,8 +878,6 @@ header h4 {
 }
 
 /*--------------------------- Styles ------------------------------*/
-
-
 
 
 /*--------------------------- Media ------------------------------*/

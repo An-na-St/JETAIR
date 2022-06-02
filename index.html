@@ -4,6 +4,7 @@
     <title>JETAIR</title>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='https://unpkg.com/swiper@8/swiper-bundle.min.css'>
     <link rel='stylesheet' href='assets/style.css'>
     <link rel='icon' href='assets/images/logo.svg'>
     <link href='ttps://fonts.googleapis.com/css2?family=Jost:wght@400;700;900&display=swap' rel='stylesheet'>
@@ -65,7 +66,6 @@
           </div>
         </div> <!---->
 
-
         <div class='intro_booking'>
           <div class='booking'>
             <h1 class='booking_title'>Забронировать частный борт</h1>
@@ -82,94 +82,129 @@
               </div>
             </form> <!---->
           </div>
-        </div>
+        </div> <!---->
       </div>
-    </div>
-    <div class='bg services'>
-      <div class='content_container'>
-        <div id='services'>
-          <h1 class='txt_black'>Наши услуги</h1>
-          <p id='services_description'>
+    </div> <!---->
+
+    <div class='bg info'> <!---->
+      <div class='content_container'> <!---->
+
+        <div class='services'>
+
+          <h1 class='services_title'>Наши услуги</h1>
+          <p class='services_description'>
             Jetair – профессионал в области организации чартерных VIP перелетов по всему миру: от Европы 
             до Азии, от Австралии до Америки. Богатый опыт и знание всех нюансов позволяют нам осуществить 
             любое пожелание клиента. Для нас нет ничего невозможного.
           </p>
-          <div id='services_options'>
-            
 
-            <!--
+          <div class='services_options'>
+            <div class='services_options_row'>
               <div class='option'>
+                <img class='option_bg' src='assets/images/services/charter_flights.png' alt=''>
+                <h1 class='option_name'>Чартерные рейсы</h1>
+              </div>
+              <div class='option'>
+                <img class='option_bg' src='assets/images/services/helicopter_rental.png' alt=''>
+                <h1 class='option_name'>Аренда вертолета</h1>
+              </div>
+            </div>
+
+            <div class='services_options_row'>
+              <div class='option'>
+                <img class='option_bg' src='assets/images/services/transportation_valuables.png' alt=''>
+                <h1 class='option_name'>Перевозка ценностей</h1>
+              </div>
+              <div class='option'>
+                <img class='option_bg' src='assets/images/services/transfer_escort.png' alt=''>
+                <h1 class='option_name'>Трансфер и сопровождение</h1>
+              </div>
+            </div>
+            <!--
+
+            <div class='option'>
               <img class='option_bg' src='assets/images/services/charter_flights.png' alt=''>
-              <h2>Чартерные рейсы</h2>
+              <h1 class='option_name'>Чартерные рейсы</h1>
             </div>
             <div class='option'>
               <img class='option_bg' src='assets/images/services/helicopter_rental.png' alt=''>
-              <h2>Аренда вертолета</h2>
+              <h1 class='option_name'>Аренда вертолета</h1>
             </div>
               <div class='option'>
               <img class='option_bg' src='assets/images/services/transportation_valuables.png' alt=''>
-              <h2>Перевозка ценностей</h2>
+              <h1 class='option_name'>Перевозка ценностей</h1>
             </div>
             <div class='option'>
               <img class='option_bg' src='assets/images/services/transfer_escort.png' alt=''>
-              <h2>Трансфер и сопровождение</h2>
+              <h1 class='option_name'>Трансфер и сопровождение</h1>
             </div>
 
             -->
             
           </div>
+
         </div>
-        <div id='company' class='txt_black'>
-          <h1>Компания</h1>
-          <h3>
+
+        <div class='company'>
+          <h1 class='company_title'>Компания</h1>
+          <h3 class='company_subtitle'>
             Ощутите уникальные преимущества и высочайший комфорт, доверив свой полет профессионалам
           </h3>
-          <p>
+          <p class='company_description'>
             За многие годы работы на рынке чартерных перевозок авиакомпания Jetair зарекомендовала себя 
             надежным и безопасным перевозчиком с высоким уровнем сервиса на борту воздушного судна, 
             выполняя заказные рейсы не только в различные регионы РФ, но и в страны Восточной и Западной 
             Европы, Центральной и Восточной Азии.
           </p>
-          <div id='advantages_company'>
-            <div>
-              <img src='assets/images/company_icons/cup.svg' alt=''>
-              <p>
-                Команда профессионалов с опытом работы в сфере бизнес-авиации более 20 лет.
-              </p>
+
+          <div class='company_advantages'>
+
+            <div class='company_advantages_half'>
+              <div class='company_advantage'>
+                <img class='advantage_img' src='assets/images/company_icons/cup.svg' alt='cup'>
+                <p class='advantage_description'>
+                  Команда профессионалов с опытом работы в сфере бизнес-авиации более 20 лет.
+                </p>
+              </div>
+  
+              <div class='company_advantage'>
+                <img class='advantage_img' src='assets/images/company_icons/diamond.svg' alt='diamond'>
+                <p class='advantage_description'>
+                  Исключительное качество сервиса – высшая ценность нашей работы. 
+                  Мы не просто следуем самым высоким мировым стандартам качества. 
+                  Мы подняли планку еще выше, 
+                  что позволяет нам превосходить ожидания самых взыскательных клиентов.
+                </p>
+              </div>
             </div>
-            <div>
-              <img src='assets/images/company_icons/diamond.svg' alt=''>
-              <p>
-                Исключительное качество сервиса – высшая ценность нашей работы. 
-                Мы не просто следуем самым высоким мировым стандартам качества. 
-                Мы подняли планку еще выше, 
-                что позволяет нам превосходить ожидания самых взыскательных клиентов.
-              </p>
-            </div>
-            <div>
-              <img src='assets/images/company_icons/headphones.svg' alt=''>
-              <p>
-                Ваш личный менеджер уделит особое внимание Вашим потребностям и пожеланиям. 
-                Каждая деталь Вашего путешествия будет продумана до мелочей, 
-                чтобы Вы могли полностью насладиться полетом
-              </p>
+
+            <div class='company_advantages_half'>
+              <div class='company_advantage'>
+                <img class='advantage_img' src='assets/images/company_icons/headphones.svg' alt='headphones'>
+                <p class='advantage_description'>
+                  Ваш личный менеджер уделит особое внимание Вашим потребностям и пожеланиям. 
+                  Каждая деталь Вашего путешествия будет продумана до мелочей, 
+                  чтобы Вы могли полностью насладиться полетом
+                </p>
+              </div>
+  
+              <div class='company_advantage'>
+                <img class='advantage_img' src='assets/images/company_icons/umbrella.svg' alt='umbrella'>
+                <p class='advantage_description'>
+                  Ваша безопасность – наша первоочередная задача. 
+                  Мы выбираем самых надежных партнеров, 
+                  которые отвечают самым строгим требованиям безопасности полетов.
+                </p>
+              </div>
             </div>
             
-            <!--
-
-              <div>
-              <img src='assets/images/company_icons/umbrella.svg' alt=''>
-              <p>
-                Ваша безопасность – наша первоочередная задача. 
-                Мы выбираем самых надежных партнеров, 
-                которые отвечают самым строгим требованиям безопасности полетов.
-              </p>
-            </div>
-            -->
           </div>
+
         </div>
+
       </div>
     </div>
+
     <div class='bg fleet'>
       <div class='content_container'>
         <h1 class='center'>Наш авиапарк</h1>
@@ -352,6 +387,8 @@
         </p>
       </div>
     </div>
+
+    <script src='https://unpkg.com/swiper@8/swiper-bundle.min.js'></script>
     <script src='https://code.jquery.com/jquery-3.4.1.slim.min.js'></script>
     <script src='assets/script.js'></script>
   </body>
