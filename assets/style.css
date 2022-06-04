@@ -40,11 +40,13 @@ a:active  {
   justify-content: space-around;
   width: 80%;
   max-width: 1110px;
+  min-width: 0;
   height: 100%;
   margin: 0 auto;
   position: relative;
   z-index: 2;
   padding: 15px 0;
+  overflow: hidden;
 } /**/
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -124,20 +126,21 @@ a:active  {
 @media (max-width: 767px) {
   .bg.intro { height: 1200px;}
   .bg.info { height: 2321px; }
+
+  .bg.booking { height: 476px; }
 }
 
 @media (max-width: 360px) {
-  .bg.info { height: 2321px; }
   .bg.fleet { height: 2948px; }
   .bg.clients { height: 933px; }
   .bg.contacts { height: 895px; }
-  .bg.booking { height: 476px; }
+  
   .bg.footer { height: 86px; }
 }
 
 /*--------------------------- Background ------------------------------*/
 
-/*--------------------------- Header ------------------------------*/
+/*--------------------------- INTRO: Header ------------------------------*/
 
 header {
   display: flex;
@@ -401,7 +404,7 @@ header h4 {
 
 /*--------------------------- Header ------------------------------*/
 
-/*--------------------------- Form ------------------------------*/
+/*--------------------------- INTRO: Form ------------------------------*/
 
 .intro_booking {
   height: 25%;
@@ -409,10 +412,9 @@ header h4 {
   margin: 0 0 30px 0;
 } /**/
 
-.booking_container_bottom {
-  height: 50%;
-  padding: 0 0 5% 0;
-}
+.bottom_booking {
+  margin-bottom: 5%;
+} /**/
 
 .booking {
   display: flex;
@@ -470,10 +472,6 @@ header h4 {
   cursor: pointer;
 } /**/
 
-.checkbox {
-
-}
-
 @media (min-width: 768px) and (max-width: 991px) {
   .intro_booking {
     height: 30%;
@@ -514,9 +512,15 @@ header h4 {
   }
 }
 
+@media (max-width: 360px) {
+  .booking_title {
+    font-size: 26px;
+  }
+}
+
 /*--------------------------- Form ------------------------------*/
 
-/*--------------------------- Services ------------------------------*/
+/*--------------------------- INFO: Services ------------------------------*/
 
 .services {
   display: flex;
@@ -536,42 +540,11 @@ header h4 {
   width: 70%;
 }
 
-.services_options {
-  width: 100%;
-  height: 70%;
-
-  display: flex;
-  flex-direction: column;
-}
-
-.services_options_row {
-  display: flex;
-  height: 50%;
-}
-
-.option {
-  position: relative;
-  min-width: 330px;
-  width: 50%;
-  height: auto;
-  overflow: hidden;
-}
-
-.option_name {
-  position: relative;
-  z-index: 2;
-  font-weight: 400;
-
-  left: 5%;
-  top: 80%;
-} /**/
-
-.option_bg {
-  position: absolute;
-  z-index: 1;
-} /**/
-
 @media (min-width: 768px) and (max-width: 991px) {
+  .services {
+    height: 45%;
+  }
+
   .services_description {
     width: 80%;
   }
@@ -579,7 +552,7 @@ header h4 {
 
 @media (max-width: 767px) {
   .services {
-    height: 35%;
+    height: 30%;
   }
 
   .services_title {
@@ -587,7 +560,8 @@ header h4 {
   }
 
   .services_description {
-    width: 90%;
+    width: 100%;
+    max-width: 600px;
   }
 }
 
@@ -601,9 +575,108 @@ header h4 {
   }
 }
 
+/*---------- без слайдера ширина 768 и выше ----------*/
+
+.service_options {
+  display: block;
+  width: 100%;
+  height: 85%;
+}
+
+.service_options_grid {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .service_options {
+    height: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .service_options {
+    height: 80%;
+  }
+
+  .slide_title {
+    font-size: 28px;
+  }
+}
+
+/*---------- со слайдером ширина 767 и ниже----------*/
+
+.service_options_slider {
+  display: none;
+  width: 100%;
+  min-width: 0;
+  height: 65%;
+}
+
+.service_options_container {
+  height: 100%;
+  width: 100%;
+}
+
+.slide_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+
+  height: 100%;
+  width: 100%;
+}
+
+.bg_plane {
+  background-image: url(images/services/charter_flights.jpg);
+}
+
+.bg_helicopter {
+  background-image: url(images/services/helicopter_rental.jpg);
+}
+
+.bg_security {
+  background-image: url(images/services/transportation_valuables.jpg);
+}
+
+.bg_car {
+  background-image: url(images/services/transfer_escort.jpg);
+}
+
+.slide_title {
+  font-weight: 400;
+  padding: 0 0 20px 0;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .service_options_slider {
+    display: block;
+  }
+
+  .service_options {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .slide_title {
+    font-size: 26px;
+  }
+}
+
 /*--------------------------- Services ------------------------------*/
 
-/*--------------------------- Company ------------------------------*/
+/*--------------------------- INFO: Company ------------------------------*/
 
 .company {
   color: #000;
@@ -614,33 +687,27 @@ header h4 {
   align-items: center;
   justify-content: space-between;
 }
-
 .company_title {
   font-size: 36px;
 }
-
 .company_subtitle {
   font-weight: 400;
   text-align: center;
   width: 50%;
   font-size: 27px;
 }
-
 .company_description {
   width: 80%;
 }
-
 .company_advantages {
   display: flex;
   height: 50%;
 }
-
 .company_advantages_half {
   display: flex;
   width: 50%;
   height: 100%;
 }
-
 .company_advantage {
   height: 100%;
   width: 50%;
@@ -649,17 +716,16 @@ header h4 {
   align-items: center;
   justify-content: space-between;
 }
-
-.advantage_img {
-
-}
-
 .advantage_description {
   padding: 0 10px;
   height: 75%;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .company {
+    height: 50%;
+  }
+
   .company_title {
     font-size: 30px;
   }
@@ -692,21 +758,24 @@ header h4 {
   
   .company_subtitle {
     font-size: 22px;
-    width: 80%;
+    width: 100%;
+    max-width: 400px;
   }
 
   .company_description {
-    width: 90%;
+    width: 100%;
+    max-width: 600px;
   }
 
   .company_advantages {
     flex-direction: column;
     align-items: center;
-    height: 70%;
+    height: 65%;
+    max-width: 500px;
   }
 
   .company_advantages_half {
-    width: 80%;
+    width: 100%;
   }
 
   .advantage_description {
@@ -749,6 +818,9 @@ header h4 {
 }
 
 /*--------------------------- Company ------------------------------*/
+
+
+
 
 
 
@@ -814,53 +886,6 @@ header h4 {
 
 /*--------------------------- Fleet ------------------------------*/
 
-/*--------------------------- Services ------------------------------*/
-
-.servxices {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 55%;
-  width: 100%;
-}
-
-.servicses_description {
-  color: #000;
-  width: 70%;
-  align-items: center;
-}
-
-.servsices_options {
-  display: grid;
-  grid: 415px 415px / 1fr 1fr;
-  width: 100%;
-}
-
-  
-  /*clients*/
-  
-  #clients_description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  #clients_description p {
-    width: 32%;
-    text-align: center;
-    line-height: 1.6;
-  }
-  
-  .feedback {
-    background: #e5e5e5;
-    padding: 20px;
-    border-radius: 20px;
-  }
-
-  /*--------------------------- Company ------------------------------*/
-
-/*--------------------------- Services ------------------------------*/
 
 /*--------------------------- Styles ------------------------------*/
 
@@ -879,6 +904,20 @@ header h4 {
 
 /*--------------------------- Styles ------------------------------*/
 
+
+
+
+
+
+
+
+/*--------------------------- Footer ------------------------------*/
+
+.footer_description {
+  color: #000;
+}
+
+/*--------------------------- Footer ------------------------------*/
 
 /*--------------------------- Media ------------------------------*/
 
@@ -903,3 +942,5 @@ header h4 {
 }
 
 /*--------------------------- Media ------------------------------*/
+
+
