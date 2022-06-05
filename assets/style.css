@@ -1,4 +1,4 @@
-*, /**/
+*,
 *::before,
 *::after {
   padding: 0;
@@ -47,24 +47,26 @@ a:active  {
   z-index: 2;
   padding: 15px 0;
   overflow: hidden;
-} /**/
+  left: 0;
+  top: 0;
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .content_container {
     width: 90%;
-  }/**/
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .content_container {
     width: 90%;
-  }/**/
+  }
 }
 
 @media (max-width: 767px) {
   .content_container {
     width: 90%;
-  }/**/
+  }
 }
 
 /*--------------------------- Scrollbar ------------------------------*/
@@ -86,6 +88,7 @@ a:active  {
 /*--------------------------- Background ------------------------------*/
 
 .bg {
+  position: relative;
   width: 100vw;
   background: #fff;
 }
@@ -126,12 +129,11 @@ a:active  {
 @media (max-width: 767px) {
   .bg.intro { height: 1200px;}
   .bg.info { height: 2321px; }
-
+  .bg.fleet { height: 3100px; }
   .bg.booking { height: 476px; }
 }
 
 @media (max-width: 360px) {
-  .bg.fleet { height: 2948px; }
   .bg.clients { height: 933px; }
   .bg.contacts { height: 895px; }
   
@@ -148,35 +150,35 @@ header {
   align-items: center;
   width: 100%;
   margin: 0 0 50px 0;
-} /**/
+}
 header h4 {
   white-space: nowrap;
-} /**/
+}
 .header_left {
   position: relative;
   display: flex;
   width: 85%;
   justify-content: flex-start;
   align-items: baseline;
-} /**/
+}
 .header_left a {
   display: block;
-} /**/
+}
 .logo {
   display: flex;
   position: relative;
   padding: 0 0 0 80px;
-} /**/
+}
 .logo_img {
   position: absolute;
   height: 110px;
   left: 0;
   top: -10px;
-} /**/
+}
 .logo h3 {
   padding: 0 15px ;
   font-weight: 900;
-} /**/
+}
 
 
 .burger {
@@ -186,7 +188,7 @@ header h4 {
   display: block;
   width: 30px;
   height: 20px;
-} /**/
+}
 .burger span {
   position: absolute;
   background-color: #fff;
@@ -194,7 +196,7 @@ header h4 {
   width: 100%;
   height: 2px;
   top: 9px;
-} /**/
+}
 .burger:before,
 .burger:after {
   content: '';
@@ -203,27 +205,27 @@ header h4 {
   width: 100%;
   height: 2px;
   left: 0;
-} /**/
+}
 .burger:before {
   top: 0;
-} /**/
+}
 .burger:after {
   bottom: 0;
-} /**/
+}
 .burger.active span {
   transform: scale(0);
   transition: all 0.3s ease 0s;
-} /**/
+}
 .burger.active:before {
   transform: rotate(45deg);
   top: 9px;
   transition: all 0.3s ease 0s;
-} /**/
+}
 .burger.active:after {
   transform: rotate(-45deg);
   bottom: 9px;
   transition: all 0.3s ease 0s;
-} /**/
+}
 
 
 .navigation {
@@ -238,56 +240,54 @@ header h4 {
   left: 180px;
   top: -500px;
   z-index: 1;
-} /**/
+}
 .navigation.active {
   top: -15px;
-} /**/
+}
 
 
 .header_menu {
   display: flex;
   align-items: center;
   height: 60px;
-} /**/
+}
 .header_list {
   display: flex;
   align-items: center;
-} /**/
+}
 .header_list li {
   list-style: none;
   margin: 0 0 0 25px;
-} /**/
+}
 .header_link {
   color: #fff;
-} /**/
+}
 
 
 .intro_description {
   width: 50%;
-} /**/
+}
 .intro_description h1 {
   margin: 0 0 10px 0;
   line-height: 1.4;
-} /**/
+}
 .intro_description p {
   width: 80%;
-} /**/
+}
 
 
 .intro_advantage {
   display: flex;
   align-items: flex-start;
   width: 40%;
-} /**/
+}
 .intro_advantage_img {
   width: 52px;
   margin: 9px 23px 0 0;
-} /**/
+}
 .intro_advantage_title {
   margin: 0 0 5px 0;
-} /**/
-
-/*Form ->->->*/
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .navigation {
@@ -297,13 +297,13 @@ header h4 {
     background: #000;
     padding: 18px 25px;
     border: #091023 1px solid;
-  } /**/
+  }
   .header_list {
     flex-direction: column;
-  } /**/
+  }
   .header_list li {
     margin: 15px 0 0 0;
-  } /**/
+  }
 
 }
 
@@ -315,34 +315,34 @@ header h4 {
     background: #000;
     padding: 18px 25px;
     border: #091023 1px solid;
-  } /**/
+  }
   .header_list {
     flex-direction: column;
-  } /**/
+  }
   .header_list li {
     margin: 15px 0 0 0;
-  } /**/
+  }
 
   .intro_description h1 {
     font-size: 28px;
     width: 70%;
     min-width: 360px;
-  } /**/
+  }
 
   .intro_advantage {
     width: 40%;
     min-width: 310px;
-  } /**/
+  }
 }
 
 @media (max-width: 767px) {
   header h4 {
     display: none;
-  } /**/
+  }
   .header_left {
     width: 100%;
     justify-content: space-between;
-  } /**/
+  }
 
   .navigation {
     justify-content: center;
@@ -353,52 +353,51 @@ header h4 {
     left: auto;
     right: 0;
     border: #091023 1px solid;
-  } /**/
+  }
   .header_list {
     flex-direction: column;
-  } /**/
+  }
   .header_list li {
     margin: 15px 0 0 0;
-  } /**/
+  }
 
   .intro_description {
     width: 75%;
-  } /**/
+  }
   .intro_description h1 {
     font-size: 26px;
-  } /**/
+  }
   .intro_description p {
     width: 100%;
-  } /**/
+  }
 
   .intro_advantage {
     width: 70%;
-  } /**/
+  }
   .intro_advantage_title {
     font-size: 22px;
-  } /**/
-
+  }
 }
 
 @media (max-width: 360px) {
   .navigation {
     height: 280px;
     width: 100%;
-  } /**/
+  }  
 
   .intro_description {
     width: 80%;
-  } /**/
+  }  
   .intro_description h1 {
     font-size: 24px;
-  } /**/
+  }  
 
   .intro_advantage {
     width: 100%;
-  } /**/
+  }  
   .intro_advantage_title {
     font-size: 18px;
-  } /**/
+  }  
 
 }
 
@@ -410,11 +409,11 @@ header h4 {
   height: 25%;
   width: 100%;
   margin: 0 0 30px 0;
-} /**/
+}
 
 .bottom_booking {
   margin-bottom: 5%;
-} /**/
+}
 
 .booking {
   display: flex;
@@ -422,7 +421,7 @@ header h4 {
   justify-content: space-between;
   height: 100%;
   width: 100%;
-} /**/
+}
 
 .booking_form {
   display: flex;
@@ -430,7 +429,7 @@ header h4 {
   height: 50%;
   width: 100%;
   justify-content: space-between;
-} /**/
+}
 
 .booking_fields {
   width: 100%;
@@ -442,7 +441,7 @@ header h4 {
   grid-column-gap: 30px;
   grid-row-gap: 20px;
   justify-items: center;
-} /**/
+}
 
 .item {
   width: 100%;
@@ -451,26 +450,26 @@ header h4 {
   height: 100%;
   border: none;
   border-radius: 5px;
-} /**/
+}
 
 .field {
   background: #c4c4c4;
   color: #808080;
   padding: 13px 10px;
-} /**/
+}
 
 .field:focus {
   color: #000;
   background: #fff;
   outline: none;
-} /**/
+}
 
 .btn {
   padding: 0;
   color: #fff;
   background: #15468d;
   cursor: pointer;
-} /**/
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   .intro_booking {
@@ -575,8 +574,6 @@ header h4 {
   }
 }
 
-/*---------- без слайдера ширина 768 и выше ----------*/
-
 .service_options {
   display: block;
   width: 100%;
@@ -608,7 +605,6 @@ header h4 {
   }
 }
 
-/*---------- со слайдером ширина 767 и ниже----------*/
 
 .service_options_slider {
   display: none;
@@ -819,7 +815,65 @@ header h4 {
 
 /*--------------------------- Company ------------------------------*/
 
+/*--------------------------- FLEET ------------------------------*/
 
+
+.fleet_title {
+  margin: 0 auto;
+}
+
+.fleet_grid {
+  display: grid;
+  grid: 382px 382px 382px / 1fr 1fr 1fr;
+}
+
+.plane {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.plane_img {
+  width: 95%;
+}
+
+.plane_description {
+  width: 95%;
+  padding-top: 30px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  
+}
+
+@media (max-width: 767px) {
+  .fleet_title {
+    font-size: 30px;
+  }
+
+  .fleet_grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 330px;
+    margin: 0 auto;
+    height: 95%;
+  }
+}
+
+@media (max-width: 360px) {
+  .fleet_title {
+    font-size: 28px;
+  }
+
+  .fleet_grid {
+    width: 280px;
+    height: 95%;
+  }
+}
+
+/*--------------------------- Fleet ------------------------------*/
 
 /*--------------------------- CLIENTS ------------------------------*/
 
@@ -1009,24 +1063,20 @@ header h4 {
 
 /*--------------------------- Clients ------------------------------*/
 
+/*--------------------------- CONTACTS ------------------------------*/
 
 
-
-
-
-
-
-/*--------------------------- Contacts ------------------------------*/
-
-#contacts_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 63%;
-  padding: 0 0 10% 0;
+.contact_title {
+  margin: 0 auto;
 }
 
-#contacts {
+.contacts_content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.contacts_connection {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1034,73 +1084,48 @@ header h4 {
   width: 35%;
 }
 
-#map_container {
-  width: 65%;
-  height: 100%;
+.contacts_mail p {
+  text-decoration: underline;
 }
 
-.contacts_and_map {
-  display: flex;
-  justify-content: space-between;
-  height: 80%;
+.map_container {
+  width: 65%;
+  height: 100%;
 }
 
 #yandex_map {
   position: relative;
   overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .contacts_content {
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    height: 90%;
+  }
+
+  .contacts_connection {
+    height: 25%;
+    width: 100%;
+  }
+
+  .map_container {
+    width: 100%;
+    height: 65%;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact_title {
+    font-size: 28px;
+  }
 }
 
 /*--------------------------- Contacts ------------------------------*/
-
-/*--------------------------- Fleet ------------------------------*/
-
-.grid {
-  display: grid;
-  grid: 382px 382px 382px / 1fr 1fr 1fr;
-  
-}
-
-.plane {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.plane_img {
-  width: 95%;
-}
-
-.plane_description {
-  width: 95%;
-}
-
-/*--------------------------- Fleet ------------------------------*/
-
-
-/*--------------------------- Styles ------------------------------*/
-
-.txt_black {
-  color: #000;
-}
-
-.txt_bold {
-  font-weight: 700;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-}
-
-/*--------------------------- Styles ------------------------------*/
-
-
-
-
-
-
-
 
 /*--------------------------- Footer ------------------------------*/
 
