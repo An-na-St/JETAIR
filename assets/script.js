@@ -17,3 +17,25 @@ new Swiper('.service_options_container', {
   loop: true,
 
 });
+
+new Swiper('.clients_slider_container', {
+
+  autoHeight: false,
+
+  slidesPerView: 1,
+
+  loop: true,
+
+  thumbs: {
+    swiper: {
+      el: '.mini_container',
+      slidesPerView: 6,
+    }
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+
+});
